@@ -188,25 +188,8 @@ proxy-groups:
     type: select
     proxies:
       - 自动选择
-      - 故障转移
       - 手动切换
-      - 落地节点
       - DIRECT
-    url: 'http://www.google.com/generate_204'
-    interval: 300
-    timeout: 5000
-    max-failed-times: 2
-  - name: 故障转移
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bypass.png
-    type: fallback
-    lazy: false
-    proxies:
-      - 故障转移首选
-      - 故障转移次选
-      - 落地节点
-      - 省流节点
-      - 高级节点
-      - 自动选择
     url: 'http://www.google.com/generate_204'
     interval: 300
     timeout: 5000
@@ -219,22 +202,6 @@ proxy-groups:
     interval: 300
     timeout: 5000
     max-failed-times: 2
-  - name: 故障转移首选
-    icon: https://testingcf.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png
-    include-all: true
-    type: select
-    url: 'https://cp.cloudflare.com/generate_204'
-  - name: 故障转移次选
-    icon: https://testingcf.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png
-    include-all: true
-    type: select
-    url: 'https://cp.cloudflare.com/generate_204'
-  - name: 落地节点
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Lab.png
-    include-all: true
-    filter: (落地|家宽|自建)
-    type: select
-    url: 'https://cp.cloudflare.com/generate_204'
   - name: 自动选择
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
     type: url-test
@@ -251,14 +218,12 @@ proxy-groups:
     tolerance: 50
     timeout: 5000
     max-failed-times: 2
-  - name: 电报消息
+  - name: Telegram
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png
     type: select
     proxies:
       - 节点选择
       - 自动选择
-      - 省流节点
-      - 故障转移
       - 狮城节点
       - 香港节点
       - 台湾节点
@@ -268,121 +233,57 @@ proxy-groups:
       - 手动切换
       - DIRECT
     url: 'https://cp.cloudflare.com/generate_204'
-  - name: OpenAi
+  - name: AI
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png
     type: select
     proxies:
       - 节点选择
       - 自动选择
-      - 省流节点
-      - 故障转移
       - 狮城节点
       - 香港节点
       - 台湾节点
       - 日本节点
       - 美国节点
       - 韩国节点
-      - 落地节点
       - 手动切换
       - DIRECT
     url: 'https://cp.cloudflare.com/generate_204'
-  - name: 油管视频
+  - name: Youtube
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png
     type: select
     proxies:
       - 节点选择
       - 自动选择
-      - 省流节点
-      - 故障转移
       - 狮城节点
       - 香港节点
       - 台湾节点
       - 日本节点
       - 美国节点
       - 韩国节点
-      - 落地节点
       - 手动切换
       - DIRECT
     url: 'https://cp.cloudflare.com/generate_204'
-  - name: 巴哈姆特
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bahamut.png
-    type: select
-    proxies:
-      - 台湾节点
-      - 落地节点
-      - 节点选择
-      - 手动切换
-      - DIRECT
-    url: 'https://cp.cloudflare.com/generate_204'
-  - name: 哔哩哔哩
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/bilibili.png
-    type: select
-    proxies:
-      - 全球直连
-      - 台湾节点
-      - 香港节点
-      - 落地节点
-    url: 'https://cp.cloudflare.com/generate_204'
-  - name: 国外媒体
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png
+  - name: Spotify
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png
     type: select
     proxies:
       - 节点选择
       - 自动选择
-      - 省流节点
-      - 故障转移
+      - 狮城节点
       - 香港节点
       - 台湾节点
-      - 狮城节点
       - 日本节点
       - 美国节点
       - 韩国节点
-      - 落地节点
       - 手动切换
       - DIRECT
     url: 'https://cp.cloudflare.com/generate_204'
-  - name: 国内媒体
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/DomesticMedia.png
-    type: select
-    proxies:
-      - DIRECT
-      - 手动切换
-    url: 'https://cp.cloudflare.com/generate_204'
-  - name: 谷歌FCM
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png
-    type: select
-    proxies:
-      - DIRECT
-      - 节点选择
-      - 美国节点
-      - 香港节点
-      - 台湾节点
-      - 狮城节点
-      - 日本节点
-      - 韩国节点
-      - 手动切换
-    url: 'https://cp.cloudflare.com/generate_204'
-  - name: 微软Bing
-    icon: https://testingcf.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/bing.png
-    type: select
-    proxies:
-      - DIRECT
-      - 节点选择
-      - 美国节点
-      - 香港节点
-      - 台湾节点
-      - 狮城节点
-      - 日本节点
-      - 韩国节点
-      - 手动切换
-    url: 'https://cp.cloudflare.com/generate_204'
-  - name: 微软云盘
+  - name: OneDrive
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/OneDrive.png
     type: select
     proxies:
       - DIRECT
       - 节点选择
-      - 省流节点
       - 美国节点
       - 香港节点
       - 台湾节点
@@ -391,7 +292,7 @@ proxy-groups:
       - 韩国节点
       - 手动切换
     url: 'https://cp.cloudflare.com/generate_204'
-  - name: 微软服务
+  - name: Microsoft
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png
     type: select
     proxies:
@@ -405,7 +306,7 @@ proxy-groups:
       - 韩国节点
       - 手动切换
     url: 'https://cp.cloudflare.com/generate_204'
-  - name: 苹果服务
+  - name: Apple
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png
     type: select
     proxies:
@@ -458,7 +359,6 @@ proxy-groups:
     proxies:
       - 节点选择
       - 自动选择
-      - 故障转移
       - 手动切换
       - DIRECT
     url: 'https://cp.cloudflare.com/generate_204'
@@ -466,7 +366,7 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png
     include-all: true
     filter: ^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)(\d+)?\b)))(?!.*((?i)(\s|-)0\.[0-9](×|x|X)|(\s|-)(([1-9](\.\d+)?)(×|x|X))|低倍率|省流|大流量|落地|家宽|自建|回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$
-    type: load-balance
+    type: url-test
     interval: 300
     strategy: consistent-hashing
     hidden: true
@@ -475,7 +375,7 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png
     include-all: true
     filter: ^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)(\d+)?\b)))(?!.*((?i)(\s|-)0\.[0-9](×|x|X)|(\s|-)(([1-9](\.\d+)?)(×|x|X))|低倍率|省流|大流量|落地|家宽|自建|回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$
-    type: load-balance
+    type: url-test
     interval: 300
     strategy: consistent-hashing
     hidden: true
@@ -484,7 +384,7 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png
     include-all: true
     filter: ^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)(\d+)?\b)))(?!.*((?i)(\s|-)0\.[0-9](×|x|X)|(\s|-)(([1-9](\.\d+)?)(×|x|X))|低倍率|省流|大流量|落地|家宽|自建|回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$
-    type: load-balance
+    type: url-test
     interval: 300
     strategy: consistent-hashing
     hidden: true
@@ -493,7 +393,7 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png
     include-all: true
     filter: ^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)(\d+)?\b)))(?!.*((?i)(\s|-)0\.[0-9](×|x|X)|(\s|-)(([1-9](\.\d+)?)(×|x|X))|低倍率|省流|大流量|落地|家宽|自建|回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$
-    type: load-balance
+    type: url-test
     interval: 300
     strategy: consistent-hashing
     hidden: true
@@ -502,7 +402,7 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png
     include-all: true
     filter: ^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)(\d+)?\b)))(?!.*((?i)(\s|-)0\.[0-9](×|x|X)|(\s|-)(([1-9](\.\d+)?)(×|x|X))|低倍率|省流|大流量|落地|家宽|自建|回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$
-    type: load-balance
+    type: url-test
     interval: 300
     strategy: consistent-hashing
     hidden: true
@@ -511,25 +411,7 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Korea.png
     include-all: true
     filter: ^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)(\d+)?\b)))(?!.*((?i)(\s|-)0\.[0-9](×|x|X)|(\s|-)(([1-9](\.\d+)?)(×|x|X))|低倍率|省流|大流量|落地|家宽|自建|回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$
-    type: load-balance
-    interval: 300
-    strategy: consistent-hashing
-    hidden: true
-    url: 'https://cp.cloudflare.com/generate_204'
-  - name: 省流节点
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Available_1.png
-    include-all: true
-    filter: ^(?=.*((?i)(\s|-)0\.[0-9](×|x|X)|低倍率|省流|大流量(\d+)?\b))(?!.*((?i)(\s|-)(([1-9](\.\d+)?)(×|x|X))|落地|家宽|自建|回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$
-    type: load-balance
-    interval: 300
-    strategy: round-robin
-    hidden: true
-    url: 'https://cp.cloudflare.com/generate_204'
-  - name: 高级节点
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/IEPL.png
-    include-all: true
-    filter: ^(?=.*((?i)(\s|-)(([1-9](\.\d+)?)(×|x|X))|专线|专用|高级|直连|急速|高倍率|IEPL|IPLC|AIA|CTM|CC|iepl|iplc|aia|ctm|cc|AC(\d+)?\b))(?!.*((?i)(\s|-)0\.[0-9](×|x|X)|低倍率|省流|大流量|落地|家宽|自建|回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$
-    type: load-balance
+    type: url-test
     interval: 300
     strategy: consistent-hashing
     hidden: true
@@ -564,13 +446,6 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  GoogleFCM:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/GoogleFCM.list
-    path: ./ruleset/GoogleFCM.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
   GoogleCN:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/GoogleCN.list
     path: ./ruleset/GoogleCN.list
@@ -581,13 +456,6 @@ rule-providers:
   SteamCN:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/SteamCN.list
     path: ./ruleset/SteamCN.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  Bing:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Bing.list
-    path: ./ruleset/Bing.list
     behavior: classical
     interval: 86400
     format: text
@@ -620,9 +488,9 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  OpenAi:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/OpenAi.list
-    path: ./ruleset/OpenAi.list
+  AI:
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/AI.list
+    path: ./ruleset/AI.list
     behavior: classical
     interval: 86400
     format: text
@@ -669,41 +537,6 @@ rule-providers:
     interval: 86400
     format: text
     type: http
-  Bahamut:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Bahamut.list
-    path: ./ruleset/Bahamut.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  BilibiliHMT:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/BilibiliHMT.list
-    path: ./ruleset/BilibiliHMT.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  Bilibili:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/Bilibili.list
-    path: ./ruleset/Bilibili.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  ChinaMedia:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaMedia.list
-    path: ./ruleset/ChinaMedia.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  ProxyMedia:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ProxyMedia.list
-    path: ./ruleset/ProxyMedia.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
   ProxyGFWlist:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ProxyGFWlist.list
     path: ./ruleset/ProxyGFWlist.list
@@ -738,26 +571,20 @@ rules:
   - "RULE-SET,UnBan,全球直连"
   - "RULE-SET,BanAD,广告拦截"
   - "RULE-SET,BanProgramAD,应用净化"
-  - "RULE-SET,GoogleFCM,谷歌FCM"
   - "RULE-SET,GoogleCN,全球直连"
   - "RULE-SET,SteamCN,全球直连"
-  - "RULE-SET,Bing,微软Bing"
-  - "RULE-SET,OneDrive,微软云盘"
-  - "RULE-SET,Microsoft,微软服务"
-  - "RULE-SET,Apple,苹果服务"
-  - "RULE-SET,Telegram,电报消息"
-  - "RULE-SET,OpenAi,OpenAi"
+  - "RULE-SET,OneDrive,OneDrive"
+  - "RULE-SET,Microsoft,Microsoft"
+  - "RULE-SET,Apple,Apple"
+  - "RULE-SET,Telegram,Telegram"
+  - "RULE-SET,AI,AI"
   - "RULE-SET,Epic,游戏平台"
   - "RULE-SET,Origin,游戏平台"
   - "RULE-SET,Sony,游戏平台"
   - "RULE-SET,Steam,游戏平台"
   - "RULE-SET,Nintendo,游戏平台"
-  - "RULE-SET,YouTube,油管视频"
-  - "RULE-SET,Bahamut,巴哈姆特"
-  - "RULE-SET,BilibiliHMT,哔哩哔哩"
-  - "RULE-SET,Bilibili,哔哩哔哩"
-  - "RULE-SET,ChinaMedia,国内媒体"
-  - "RULE-SET,ProxyMedia,国外媒体"
+  - "RULE-SET,YouTube,Youtube"
+  - "RULE-SET,Spotify,Spotify"
   - "RULE-SET,ProxyGFWlist,节点选择"
   - "RULE-SET,ChinaDomain,全球直连"
   - "RULE-SET,ChinaCompanyIp,全球直连"
