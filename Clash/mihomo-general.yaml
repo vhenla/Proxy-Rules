@@ -190,7 +190,7 @@ proxy-groups:
       - 自动选择
       - 手动切换
       - DIRECT
-    url: 'http://www.google.com/generate_204'
+    url: 'https://cp.cloudflare.com/generate_204'
     interval: 300
     timeout: 5000
     max-failed-times: 2
@@ -214,27 +214,42 @@ proxy-groups:
     lazy: false
     proxies:
       - 香港节点
-      - 台湾节点
-      - 新加坡节点
-      - 日本节点
       - 美国节点
+      - 日本节点
+      - 新加坡节点
+      - 台湾节点
       - 韩国节点
-    url: 'http://www.google.com/generate_204'
+    url: 'https://cp.cloudflare.com/generate_204'
     interval: 300
     tolerance: 50
     timeout: 5000
     max-failed-times: 2
+  - name: Google
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png
+    type: select
+    proxies:
+      - 节点选择
+      - 自动选择
+      - 香港节点
+      - 美国节点
+      - 日本节点
+      - 新加坡节点
+      - 台湾节点
+      - 韩国节点
+      - 手动切换
+      - DIRECT
+    url: 'https://cp.cloudflare.com/generate_204'
   - name: Telegram
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png
     type: select
     proxies:
       - 节点选择
       - 自动选择
-      - 新加坡节点
       - 香港节点
-      - 台湾节点
-      - 日本节点
       - 美国节点
+      - 日本节点
+      - 新加坡节点
+      - 台湾节点
       - 韩国节点
       - 手动切换
       - DIRECT
@@ -247,7 +262,6 @@ proxy-groups:
       - 节点选择
       - 自动选择
       - 新加坡节点
-      - 香港节点
       - 台湾节点
       - 日本节点
       - 韩国节点
@@ -257,31 +271,44 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png
     type: select
     proxies:
+      - 香港节点
+      - 美国节点
+      - 日本节点
+      - 新加坡节点
+      - 台湾节点
+      - 韩国节点
       - 节点选择
       - 自动选择
-      - 新加坡节点
-      - 香港节点
-      - 台湾节点
-      - 日本节点
-      - 美国节点
-      - 韩国节点
       - 手动切换
-      - DIRECT
     url: 'https://cp.cloudflare.com/generate_204'
   - name: Spotify
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png
     type: select
     proxies:
+      - 香港节点
+      - 美国节点
+      - 日本节点
+      - 新加坡节点
+      - 台湾节点
+      - 韩国节点
       - 节点选择
       - 自动选择
-      - 新加坡节点
-      - 香港节点
-      - 台湾节点
-      - 日本节点
-      - 美国节点
-      - 韩国节点
       - 手动切换
       - DIRECT
+    url: 'https://cp.cloudflare.com/generate_204'
+  - name: 游戏平台
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png
+    type: select
+    proxies:
+      - 节点选择
+      - DIRECT
+      - 香港节点
+      - 美国节点
+      - 日本节点
+      - 新加坡节点
+      - 台湾节点
+      - 韩国节点
+      - 手动切换
     url: 'https://cp.cloudflare.com/generate_204'
   - name: OneDrive
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/OneDrive.png
@@ -289,11 +316,11 @@ proxy-groups:
     proxies:
       - DIRECT
       - 节点选择
-      - 美国节点
       - 香港节点
-      - 台湾节点
-      - 新加坡节点
+      - 美国节点
       - 日本节点
+      - 新加坡节点
+      - 台湾节点
       - 韩国节点
       - 手动切换
     url: 'https://cp.cloudflare.com/generate_204'
@@ -303,11 +330,11 @@ proxy-groups:
     proxies:
       - 节点选择
       - DIRECT
-      - 美国节点
       - 香港节点
-      - 台湾节点
-      - 新加坡节点
+      - 美国节点
       - 日本节点
+      - 新加坡节点
+      - 台湾节点
       - 韩国节点
       - 手动切换
     url: 'https://cp.cloudflare.com/generate_204'
@@ -317,25 +344,11 @@ proxy-groups:
     proxies:
       - DIRECT
       - 节点选择
-      - 美国节点
       - 香港节点
-      - 台湾节点
-      - 新加坡节点
-      - 日本节点
-      - 韩国节点
-      - 手动切换
-    url: 'https://cp.cloudflare.com/generate_204'
-  - name: 游戏平台
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png
-    type: select
-    proxies:
-      - DIRECT
-      - 节点选择
       - 美国节点
-      - 香港节点
-      - 台湾节点
-      - 新加坡节点
       - 日本节点
+      - 新加坡节点
+      - 台湾节点
       - 韩国节点
       - 手动切换
     url: 'https://cp.cloudflare.com/generate_204'
@@ -447,6 +460,13 @@ rule-providers:
   BanProgramAD:
     url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/BanProgramAD.list
     path: ./ruleset/BanProgramAD.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Google:
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/Google.list
+    path: ./ruleset/Google.list
     behavior: classical
     interval: 86400
     format: text
@@ -585,6 +605,7 @@ rules:
   - "RULE-SET,BanProgramAD,应用净化"
   - "RULE-SET,GoogleCN,全球直连"
   - "RULE-SET,SteamCN,全球直连"
+  - "RULE-SET,Google,Google"
   - "RULE-SET,OneDrive,OneDrive"
   - "RULE-SET,Microsoft,Microsoft"
   - "RULE-SET,Apple,Apple"
