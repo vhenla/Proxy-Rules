@@ -196,8 +196,14 @@ proxy-groups:
     max-failed-times: 2
   - name: 手动切换
     icon: https://testingcf.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png
-    include-all: true
     type: select
+    proxies:
+      - 香港节点
+      - 美国节点
+      - 日本节点
+      - 新加坡节点
+      - 台湾节点
+      - 韩国节点
     url: 'https://cp.cloudflare.com/generate_204'
     interval: 300
     timeout: 5000
@@ -209,7 +215,7 @@ proxy-groups:
     proxies:
       - 香港节点
       - 台湾节点
-      - 狮城节点
+      - 新加坡节点
       - 日本节点
       - 美国节点
       - 韩国节点
@@ -224,7 +230,7 @@ proxy-groups:
     proxies:
       - 节点选择
       - 自动选择
-      - 狮城节点
+      - 新加坡节点
       - 香港节点
       - 台湾节点
       - 日本节点
@@ -237,16 +243,15 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png
     type: select
     proxies:
+      - 美国节点
       - 节点选择
       - 自动选择
-      - 狮城节点
+      - 新加坡节点
       - 香港节点
       - 台湾节点
       - 日本节点
-      - 美国节点
       - 韩国节点
       - 手动切换
-      - DIRECT
     url: 'https://cp.cloudflare.com/generate_204'
   - name: Youtube
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png
@@ -254,7 +259,7 @@ proxy-groups:
     proxies:
       - 节点选择
       - 自动选择
-      - 狮城节点
+      - 新加坡节点
       - 香港节点
       - 台湾节点
       - 日本节点
@@ -269,7 +274,7 @@ proxy-groups:
     proxies:
       - 节点选择
       - 自动选择
-      - 狮城节点
+      - 新加坡节点
       - 香港节点
       - 台湾节点
       - 日本节点
@@ -287,7 +292,7 @@ proxy-groups:
       - 美国节点
       - 香港节点
       - 台湾节点
-      - 狮城节点
+      - 新加坡节点
       - 日本节点
       - 韩国节点
       - 手动切换
@@ -301,7 +306,7 @@ proxy-groups:
       - 美国节点
       - 香港节点
       - 台湾节点
-      - 狮城节点
+      - 新加坡节点
       - 日本节点
       - 韩国节点
       - 手动切换
@@ -315,7 +320,7 @@ proxy-groups:
       - 美国节点
       - 香港节点
       - 台湾节点
-      - 狮城节点
+      - 新加坡节点
       - 日本节点
       - 韩国节点
       - 手动切换
@@ -329,7 +334,7 @@ proxy-groups:
       - 美国节点
       - 香港节点
       - 台湾节点
-      - 狮城节点
+      - 新加坡节点
       - 日本节点
       - 韩国节点
       - 手动切换
@@ -398,7 +403,7 @@ proxy-groups:
     strategy: consistent-hashing
     hidden: true
     url: 'https://cp.cloudflare.com/generate_204'
-  - name: 狮城节点
+  - name: 新加坡节点
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png
     include-all: true
     filter: ^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)(\d+)?\b)))(?!.*((?i)(\s|-)0\.[0-9](×|x|X)|(\s|-)(([1-9](\.\d+)?)(×|x|X))|低倍率|省流|大流量|落地|家宽|自建|回国|校园|游戏|🎮|(\b(GAME)(\d+)?\b))).*$
